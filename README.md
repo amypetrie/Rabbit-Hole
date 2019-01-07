@@ -1,21 +1,17 @@
 # README
-## Rabbit-Hole
+## Rabbit
 
-RabbitHole is a customized web application designed to help users learn new content more efficiently through consumption of online resources. RabbitHole provides an organizational structure around the online research process through an interactive GUI where users document research topics, specific questions, notes, and resource links. RabbitHole utilizes the Bing v7 Search API to continually generate resources directly related to a user's topic and question. Google OAuth is used for user registration and login.
+Rabbit is a web application designed to help users conduct online research more efficiently, providing a process for breaking down a complex topic into targeted questions, documenting/storing online content for future reference, and notetaking. RabbitH utilizes the Bing v7 Search API to continually generate resources directly related to a user's topic of interest and specific question. Google OAuth is used for user registration and login.
 
 ### Setup:
 
-To begin, clone this repo:
+To begin:
+Clone this repo.
+Run `bundle install`. You can review the list of added gems are below.
+Run `bundle exec rake db:{drop,create,migrate}` to create the database and schema.
+Run the local test suite using `bundle exec rspec` to ensure the application has been downloaded correctly (expect 100% success rate).
 
-```
-git@github.com:Isaac-Falkenstine/Rabbit-Hole.git
-```
-After you `cd` into the project directory, run `bundle install` from the command line.
-Next, run `bundle exec rake db:{drop,create,migrate}` to create the database and schema.
-
-At this point, you should be able to run the local test suite using `bundle exec rspec`.
-
-### Gems:
+### Gems installed:
 
 #### Main
 - gem 'figaro'
@@ -48,10 +44,9 @@ At this point, you should be able to run the local test suite using `bundle exec
 
 ### Requirements, Access, Security:
 
-You will need a Bing v7 Search Key, and a Google Oauth Client Key and Secret. Set these keys as environment variables in the application.yml file that is generated when Figaro is installed (type `figaro install` into your terminal at the root of the application).
+This application requires a Bing v7 Search Key for API consumption and a Google OAuth Client Key and Secret to utilize the existing OAuth capabilities.
 
-
-### Near Term Functionality:
+### Near Term Functionality Goals:
 - Editing profile information.
 - Editing/deleting topics, links, questions.
 - Scroll bar for Bing Links and ability to set how many links a user wants displayed.
@@ -61,12 +56,4 @@ You will need a Bing v7 Search Key, and a Google Oauth Client Key and Secret. Se
 
 - Incorporating Google Calendar to schedule to-do's.
 - Rendering web page content within the app.
-- Creating a mobile version.
-
-
-### Contributing:
-
-In order to contribute, please fork this repo, then clone your new repo and create a branch for your feature.
-
-Please make sure to test your feature fully, using RSpec, before commiting your changes and pushing to your own repo, then create and submit a pull request back to this repository.
 
