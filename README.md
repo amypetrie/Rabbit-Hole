@@ -1,7 +1,7 @@
 # README
 ## Rabbit
 
-Rabbit is a web application designed to help users conduct online research more efficiently, providing a process for breaking down a complex topic into targeted questions, documenting/storing online content for future reference, and notetaking. RabbitH utilizes the Bing v7 Search API to continually generate resources directly related to a user's topic of interest and specific question. Google OAuth is used for user registration and login.
+Down the Rabbit Hole (Rabbit) is a Rails 5.2 web application designed to help users conduct online research more efficiently. By providing a process for breaking down a complex topic into targeted questions, Rabbit makes documenting/storing online content for future reference and notetaking organized and easy. Rabbit guides a user through creating a research topic and setting an intention to asking specific questions to find knowledge and answers. Rabbit utilizes the Bing v7 Search API to continually generate relevant online resources, and provides a cohesive interface to save information a user deems relevent. Google OAuth is used for user registration and login.
 
 ### Setup:
 
