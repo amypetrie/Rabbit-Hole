@@ -1,59 +1,79 @@
 # README
 ## Rabbit
 
-Down the Rabbit Hole (Rabbit) is a Rails 5.2 web application designed to help users conduct online research more efficiently. By providing a process for breaking down a complex topic into targeted questions, Rabbit makes documenting/storing online content for future reference and notetaking organized and easy. Rabbit guides a user through creating a research topic and setting an intention to asking specific questions to find knowledge and answers. Rabbit utilizes the Bing v7 Search API to continually generate relevant online resources, and provides a cohesive interface to save information a user deems relevent. Google OAuth is used for user registration and login.
+Down the Rabbit Hole (Rabbit) is a Rails 5.2 web application that helps users conduct online research more efficiently. Rabbit provides a process for breaking down a complex topic into targeted questions, and makes storing links and note-taking organized and easy. Rabbit guides a user through creating a research topic and setting an intention to resources with answers and new knowledge. The Bing v7 Search API is consumed to continually generate relevant content, and Google OAuth is used for user registration and login. 
 
-### Setup:
+## Table of Contents
 
-To begin:
-Clone this repo.
-Run `bundle install`. You can review the list of added gems are below.
-Run `bundle exec rake db:{drop,create,migrate}` to create the database and schema.
-Run the local test suite using `bundle exec rspec` to ensure the application has been downloaded correctly (expect 100% success rate).
+* Schema
+* Prerequisites
+* Testing Dependencies
+* APIs consumed (keys required) / External Services
+* Testing Dependencies
+* Additional Gems
+* Installation
+* Running the Test Suite
+* Near Term Functionality Goals
+* Future Iterations
 
-### Gems installed:
-
-#### Main
-- gem 'figaro'
-- gem 'faraday'
-- gem 'sendgrid-ruby'
-- gem 'google-api-client', req
-- gem 'omniauth-google-oauth2'
-- gem 'bcrypt'
-- gem 'webpacker'
-- gem'jquery-rails'
-- gem 'popper_js'
-- gem 'simple_form'
-
-#### Testing
-- gem 'rspec-rails'
-- gem 'launchy'
-- gem 'webmock'
-- gem 'vcr'
-- gem 'capybara'
-- gem 'shoulda-matchers'  
-- gem 'simplecov'
-- gem 'database_cleaner'
-- gem 'factory_bot_rails'
-- gem 'pry'
-- gem 'selenium-webdriver'
-
-### Schema:
+## Schema:
 
 ![Schema](./schema2.png)
 
-### Requirements, Access, Security:
+## Prerequisites 
 
-This application requires a Bing v7 Search Key for API consumption and a Google OAuth Client Key and Secret to utilize the existing OAuth capabilities.
+* Ruby v. 2.4
+* Rails v. 5.2
+* Puma v. 3.7
+* PG v. 1.1.3
 
-### Near Term Functionality Goals:
-- Editing profile information.
-- Editing/deleting topics, links, questions.
-- Scroll bar for Bing Links and ability to set how many links a user wants displayed.
-- Admin functionality.
+## APIs Consumed (keys required) / External Services
 
-### Future Iterations:
+* [Bing v7 Search](https://azure.microsoft.com/en-us/services/cognitive-services/bing-web-search-api/)
+* [Google OAuth](https://developers.google.com/identity/protocols/OAuth2WebServer)
 
-- Incorporating Google Calendar to schedule to-do's.
-- Rendering web page content within the app.
+## Testing Dependencies
+
+* Rspec-Rails
+* Capybara
+* Factory_bot_rails
+* Webmock
+* VCR
+* Faraday
+
+## Additional Gems
+
+* Bcrypt
+* Shoulda-matchers
+* Database_cleaner
+* Figaro
+
+## Installation
+Clone down this repository, change into the root directory and run:
+
+`bundle`
+
+To setup the database necessary for this API, run the following commands:
+
+`bundle exec rake db:create`
+
+`bundle exec rake db:migrate`
+
+## Running the Test Suite
+
+Run `bundle exec rspec` to run the full test suite.
+
+Run `bundle exec rspec <TEST FILE PATH>` to run a specific test
+
+
+## Near Term Functionality Goals
+* Editing profile information.
+* Editing/deleting topics, links, questions.
+* Scroll bar for Bing Links and ability to set how many links a user wants displayed.
+* Admin functionality.
+
+## Future Iterations
+
+* Incorporating Google Calendar to schedule to-do's.
+* Rendering web page content within the app.
 
