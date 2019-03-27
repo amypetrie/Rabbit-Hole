@@ -1,9 +1,9 @@
 # README
-## Researchr
+## Down the Rabbit Hole (Rabbit)
 
-Researchr is a Rails 5.2 web application that helps users conduct online research more efficiently. Researchr provides a process for breaking down a complex topic into targeted questions, and makes storing links and note-taking organized and easy. The site guides a user through creating a research topic and setting an intention to resources with answers and new knowledge. The Bing v7 Search API is consumed to continually generate relevant content, and Google OAuth is used for user registration and login. 
+Down the Rabbit Hole (Rabbit) is a Rails 5.2 web application that helps users conduct online research more efficiently. Rabbit provides a process for breaking down a complex topic into targeted questions, and makes storing links and note-taking organized and easy. The site guides a user through creating a research topic and setting an intention to resources with answers and new knowledge. The Bing v7 Search API is consumed to continually generate relevant content, and Google OAuth is used for user registration and login. 
 
-Researchr is deployed at https://researchr.herokuapp.com/
+Rabbit is deployed at https://down-the-rabbit-hole.herokuapp.com/
 
 ## Table of Contents
 
